@@ -28,6 +28,22 @@ FROM Smart_Farming_Crop_Yield_2024
 GROUP BY pesticide_usage_ml 
 ORDER BY pesticide_usage_ml;
 
+--  identifying the most frequent crop disease status for each region -- 
+WITH disease_counts AS (
+    SELECT region, crop_disease_status, COUNT(*) AS disease_count
+    FROM Smart_Farming_Crop_Yield_2024
+    GROUP BY region, crop_disease_status
+)
+SELECT dc1.region, dc1.crop_disease_status, dc1.disease_count
+FROM disease_counts dc1
+INNER JOIN (
+    SELECT region, MAX(disease_count) AS max_count
+    FROM disease_counts
+    GROUP BY region
+) dc2
+ON dc1.region = dc2.region AND dc1.disease_count = dc2.max_count
+ORDER BY dc1.region;
+
 
 
 
