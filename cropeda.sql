@@ -44,6 +44,30 @@ INNER JOIN (
 ON dc1.region = dc2.region AND dc1.disease_count = dc2.max_count
 ORDER BY dc1.region;
 
+-- show disease status for each crop --
+select crop_type, crop_disease_status, count(*) as disease_count
+from Smart_Farming_Crop_Yield_2024
+group by crop_type, crop_disease_status;
+
+-- show most frequent disease status for each crop -- 
+WITH disease_counts AS (
+    SELECT crop_type, crop_disease_status, COUNT(*) AS disease_count
+    FROM Smart_Farming_Crop_Yield_2024
+    GROUP BY crop_type, crop_disease_status
+)
+SELECT dc1.crop_type, dc1.crop_disease_status, dc1.disease_count
+FROM disease_counts dc1
+INNER JOIN (
+    SELECT crop_type, MAX(disease_count) AS most_frequent_disease
+    FROM disease_counts
+    GROUP BY crop_type
+) dc2
+ON dc1.crop_type = dc2.crop_type AND dc1.disease_count = dc2.most_frequent_disease
+ORDER BY dc1.crop_type;
+
+-- maize was the healthiest crop across all smart farms--
+--cotton, soybean, and wheat has the most severe afflicted crops--
+
 
 
 
