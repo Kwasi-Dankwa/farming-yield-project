@@ -30,7 +30,7 @@ EDA using R and Python:
 > 📁 [`farm_regression.R`](https://github.com/Kwasi-Dankwa/farming-yield-project/blob/main/farm_regression.R)
 > 📁 [`Smart_Farm.ipynb`](https://github.com/Kwasi-Dankwa/farming-yield-project/blob/main/Smart_Farm.ipynb)
 
-### REGRESSION MODEL DISCUSSION
+# REGRESSION MODEL DISCUSSION
 
 Regression models trained to predict crop yield:
 - Linear Regression
