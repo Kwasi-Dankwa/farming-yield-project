@@ -52,7 +52,8 @@ Regression models trained to predict crop yield:
 | K-Nearest Neighbors   | -0.1693   | 1,614,884.98   |
 | Decision Tree         | -1.5211   | 3,481,810.04   |
 
-### Performance Graph
+### Model Performance Graph
+![Model Performance](images/modelperformance.png "Model Performance")
 
 
 
