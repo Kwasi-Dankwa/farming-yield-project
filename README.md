@@ -30,6 +30,31 @@ EDA using R and Python:
 > 📁 [`farm_regression.R`](https://github.com/Kwasi-Dankwa/farming-yield-project/blob/main/farm_regression.R)
 > 📁 [`Smart_Farm.ipynb`](https://github.com/Kwasi-Dankwa/farming-yield-project/blob/main/Smart_Farm.ipynb)
 
+
+### 📊 Analysis
+1. 🌾 Disease Distribution by Crop
+
+![Disease Distribution by Crop](images/distru.png "Disease Distribution by Crop")
+
+
+
+2. ❄️ Is Temperature Related to Disease Outbreaks?
+
+   
+![DTemperature](images/temperature.png "temperature")
+
+3.🌿 Average Yield by Crop and Region
+
+![AverageCrop](images/avgcrop.png "averagecrop")
+
+4. 📊 Pesticide Use vs Yield
+
+![Pest Use](images/pestuse.png "pestuse")
+
+
+
+
+
 # REGRESSION MODEL DISCUSSION
 
 Regression models trained to predict crop yield:
