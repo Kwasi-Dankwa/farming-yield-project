@@ -32,24 +32,47 @@ EDA using R and Python:
 
 
 ### 📊 Analysis
-1. 🌾 Disease Distribution by Crop
+#### 1. 🌾 Disease Distribution by Crop
 
 ![Disease Distribution by Crop](images/distru.png "Disease Distribution by Crop")
 
+##### Takeaways
+* Soybean and Cotton face the most Severe disease instances.
+* Maize and Wheat appear to be the most resilient, with higher proportions of healthy (None) or mild cases.
+* This graph can help prioritize crop-specific disease intervention efforts.
 
 
-2. ❄️ Is Temperature Related to Disease Outbreaks?
+#### 2. ❄️ Is Temperature Related to Disease Outbreaks?
 
-   
 ![DTemperature](images/temperature.png "temperature")
 
-3.🌿 Average Yield by Crop and Region
+>  This graph shows that in this particular dataset, there is little to no apparent relationship between the average temperature and the severity of crop disease outbreaks. The average temperature remains relatively constant (around 24.5°C) regardless of whether the crops have mild, moderate, severe, or no disease. Therefore, Temperature does not affect disease type
+
+#### 3.🌿 Average Yield by Crop and Region
 
 ![AverageCrop](images/avgcrop.png "averagecrop")
 
-4. 📊 Pesticide Use vs Yield
+> This heatmap compares the average yields of different crops across various geographical regions. It allows for quick identification of which crops perform best in which regions based on yield per hectare. For example, we can easily see that South India has a particularly high average yield for both Rice and Soybean compared to the other regions shown.
+
+##### Takeaways
+* Cotton: Appears to have a relatively moderate yield in all the represented regions.
+* Maize: Shows a higher average yield in Central USA and South USA (darker teal) compared to East Africa and North India (lighter teal). South India seems to have a moderate yield.
+* Rice: Exhibits a higher average yield in South India (darkest teal) compared to the other regions, which show relatively lower to moderate yields.
+* Soybean: Displays a high average yield in South India (darkest teal) and Central USA (darker teal), with moderate yields in South USA and North India, and a lower yield in East Africa (lighter teal).
+* Wheat: Shows a moderate to high average yield in Central USA and South USA, a moderate yield in North India, and lower yields in East Africa and South India (lighter teal).
+
+#### 4. 📊 Pesticide Use vs Yield
 
 ![Pest Use](images/pestuse.png "pestuse")
+
+> Looking at all the points, there appears to be a generally positive correlation between pesticide usage and yield. As pesticide usage increases, the yield tends to increase as well. This is suggested by the upward sloping trend of most of the individual disease status lines.
+
+##### Takeways
+* The red trend line (None - no disease) starts at a lower yield with lower pesticide use but shows a steep positive slope. This suggests that for crops with no disease, increased pesticide use is strongly associated with higher yields.
+* The blue (Mild disease) and orange (Moderate disease) trend lines start at higher yield levels compared to the "None" category at lower pesticide usage. They also show a positive relationship, though the slopes might differ slightly. This could imply that even with some disease, a certain level of yield is maintained, and increasing pesticides further boosts it.
+* The teal trend line (Severe disease) starts at the highest yield level at lower pesticide usage among all categories. However, its slope seems less steep than the "None" category.
+> This might suggest that even with increasing pesticide use, the yield gains for severely diseased crops are not as dramatic as for healthy crops. It's also worth noting that there are fewer data points in the higher pesticide usage range for the severely diseased category. In summary, this graph suggests that, in general, higher pesticide usage is associated with higher yields across all crop disease statuses. However, the relationship might differ depending on the severity of the disease. Notably, healthy crops (no disease) seem to benefit significantly from increased pesticide application in terms of yield gain, while severely diseased crops might show a less pronounced increase in yield with higher pesticide use.
+
 
 
 
@@ -90,6 +113,6 @@ Regression models trained to predict crop yield:
 Tableau dashboards were used to:
 - Visualize crop yields by region
 - Analyze rainfall and fertilizer usage correlations
-> 📊 [View the Tableau Dashboard](your-public-tableau-link)
+> 📊 [View the Tableau Dashboard](https://public.tableau.com/views/SmartFarmingYieldDashboard2024/Dashboard1?:language=en-GB&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
 
